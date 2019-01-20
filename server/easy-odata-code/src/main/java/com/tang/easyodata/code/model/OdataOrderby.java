@@ -1,7 +1,8 @@
 package com.tang.easyodata.code.model;
 
 import com.tang.easyodata.code.model.enums.OdataOrderbyTypeEnum;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.NoArgsConstructor;
 
 /**
@@ -9,7 +10,8 @@ import lombok.NoArgsConstructor;
  * @Author: tzg
  * @Date: 2019/1/6/006 17:31
  */
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 public class OdataOrderby extends OdataField {
 
@@ -26,5 +28,13 @@ public class OdataOrderby extends OdataField {
     public OdataOrderby(String fieldName, OdataOrderbyTypeEnum typeEnum) {
         this.fieldName = fieldName;
         this.typeEnum = typeEnum;
+    }
+
+    @Override
+    public String toString() {
+        return "OdataOrderby{" +
+                "fieldName='" + fieldName + '\'' +
+                ", typeEnum=" + typeEnum +
+                '}';
     }
 }

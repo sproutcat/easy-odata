@@ -26,16 +26,16 @@ simpleCriteria: criteriaLike
             | criteriaOther
 ;
 
-criteriaLike: ('substringof('|'contains(') value ',' field ')'
+criteriaLike: ('substringof('|'contains(') STRING ',' field ')'
 ;
 
-criteriaEndswith: 'endswith(' value ',' field ')'
+criteriaEndswith: 'endswith(' STRING ',' field ')'
 ;
 
-criteriaStartswith: 'startswith(' value ',' field ')'
+criteriaStartswith: 'startswith(' STRING ',' field ')'
 ;
 
-criteriaNotLike: 'indexof(' field ',' value ') eq -1'
+criteriaNotLike: 'indexof(' field ',' STRING ') eq -1'
 ;
 
 criteriaOther: field operate value

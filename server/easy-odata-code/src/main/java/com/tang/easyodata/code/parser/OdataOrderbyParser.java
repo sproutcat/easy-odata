@@ -29,12 +29,27 @@ public class OdataOrderbyParser extends BaseParser<List<OdataOrderby>> {
         if (StringUtils.isBlank(input)) {
             return null;
         }
-        String[] orderby = StringUtils.split(input, SYMBOL_COMMA);
-        int len = orderby.length;
-        List<OdataOrderby> orderbyList = new ArrayList<>(len);
+        int len = input.length(), last = len - 1, i = 0, start = 0;
+        List<OdataOrderby> orderbyList = new ArrayList<>();
         OdataOrderby by;
-        for (int i = 0; i < len; i++) {
-            by = genOrderby(orderby[i]);
+        boolean lastMatch = false;
+        while (i < len) {
+            if (input.charAt(i) == SYMBOL_COMMA) {
+                lastMatch = true;
+                if (i > 0) {
+                    by = genOrderby(input.substring(start, i));
+                    if (null != by) {
+                        orderbyList.add(by);
+                    }
+                }
+                start = ++i;
+                continue;
+            }
+            lastMatch = false;
+            i++;
+        }
+        if (!lastMatch) {
+            by = genOrderby(input.substring(start, i));
             if (null != by) {
                 orderbyList.add(by);
             }
@@ -44,6 +59,7 @@ public class OdataOrderbyParser extends BaseParser<List<OdataOrderby>> {
 
     /**
      * 根据排序实体
+     *
      * @param input
      * @return
      */

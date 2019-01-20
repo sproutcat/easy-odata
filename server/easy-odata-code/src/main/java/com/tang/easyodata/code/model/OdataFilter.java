@@ -1,17 +1,18 @@
 package com.tang.easyodata.code.model;
 
 import com.tang.easyodata.code.model.enums.OdataFilterOperateEnum;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.ObjectUtils;
 
 /**
  * @Description: odata 过滤实体
  * @Author: tzg
  * @Date: 2019/1/6 17:28
  */
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 public class OdataFilter extends OdataField {
 
@@ -46,4 +47,12 @@ public class OdataFilter extends OdataField {
         return new OdataFilter(null, logic, odataFilter);
     }
 
+    @Override
+    public String toString() {
+        return "OdataFilter{" +
+                "fieldName='" + fieldName + '\'' +
+                ", operate=" + operate +
+                ", value=" + value +
+                '}';
+    }
 }

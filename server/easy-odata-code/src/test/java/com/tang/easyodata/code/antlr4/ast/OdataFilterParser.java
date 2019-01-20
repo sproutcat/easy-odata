@@ -428,9 +428,7 @@ public class OdataFilterParser extends Parser {
 	}
 
 	public static class CriteriaLikeContext extends ParserRuleContext {
-		public ValueContext value() {
-			return getRuleContext(ValueContext.class,0);
-		}
+		public TerminalNode STRING() { return getToken(OdataFilterParser.STRING, 0); }
 		public FieldContext field() {
 			return getRuleContext(FieldContext.class,0);
 		}
@@ -466,7 +464,7 @@ public class OdataFilterParser extends Parser {
 				consume();
 			}
 			setState(59);
-			value();
+			match(STRING);
 			setState(60);
 			match(T__12);
 			setState(61);
@@ -487,9 +485,7 @@ public class OdataFilterParser extends Parser {
 	}
 
 	public static class CriteriaEndswithContext extends ParserRuleContext {
-		public ValueContext value() {
-			return getRuleContext(ValueContext.class,0);
-		}
+		public TerminalNode STRING() { return getToken(OdataFilterParser.STRING, 0); }
 		public FieldContext field() {
 			return getRuleContext(FieldContext.class,0);
 		}
@@ -516,7 +512,7 @@ public class OdataFilterParser extends Parser {
 			setState(64);
 			match(T__13);
 			setState(65);
-			value();
+			match(STRING);
 			setState(66);
 			match(T__12);
 			setState(67);
@@ -537,9 +533,7 @@ public class OdataFilterParser extends Parser {
 	}
 
 	public static class CriteriaStartswithContext extends ParserRuleContext {
-		public ValueContext value() {
-			return getRuleContext(ValueContext.class,0);
-		}
+		public TerminalNode STRING() { return getToken(OdataFilterParser.STRING, 0); }
 		public FieldContext field() {
 			return getRuleContext(FieldContext.class,0);
 		}
@@ -566,7 +560,7 @@ public class OdataFilterParser extends Parser {
 			setState(70);
 			match(T__14);
 			setState(71);
-			value();
+			match(STRING);
 			setState(72);
 			match(T__12);
 			setState(73);
@@ -590,9 +584,7 @@ public class OdataFilterParser extends Parser {
 		public FieldContext field() {
 			return getRuleContext(FieldContext.class,0);
 		}
-		public ValueContext value() {
-			return getRuleContext(ValueContext.class,0);
-		}
+		public TerminalNode STRING() { return getToken(OdataFilterParser.STRING, 0); }
 		public CriteriaNotLikeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -620,7 +612,7 @@ public class OdataFilterParser extends Parser {
 			setState(78);
 			match(T__12);
 			setState(79);
-			value();
+			match(STRING);
 			setState(80);
 			match(T__16);
 			}
@@ -832,13 +824,13 @@ public class OdataFilterParser extends Parser {
 		"\3\2\2\2-+\3\2\2\2.\64\5\n\6\2/\60\7\13\2\2\60\61\5\4\3\2\61\62\7\f\2"+
 		"\2\62\64\3\2\2\2\63.\3\2\2\2\63/\3\2\2\2\64\t\3\2\2\2\65;\5\f\7\2\66;"+
 		"\5\16\b\2\67;\5\20\t\28;\5\22\n\29;\5\24\13\2:\65\3\2\2\2:\66\3\2\2\2"+
-		":\67\3\2\2\2:8\3\2\2\2:9\3\2\2\2;\13\3\2\2\2<=\t\4\2\2=>\5\32\16\2>?\7"+
-		"\17\2\2?@\5\26\f\2@A\7\f\2\2A\r\3\2\2\2BC\7\20\2\2CD\5\32\16\2DE\7\17"+
-		"\2\2EF\5\26\f\2FG\7\f\2\2G\17\3\2\2\2HI\7\21\2\2IJ\5\32\16\2JK\7\17\2"+
-		"\2KL\5\26\f\2LM\7\f\2\2M\21\3\2\2\2NO\7\22\2\2OP\5\26\f\2PQ\7\17\2\2Q"+
-		"R\5\32\16\2RS\7\23\2\2S\23\3\2\2\2TU\5\26\f\2UV\5\30\r\2VW\5\32\16\2W"+
-		"\25\3\2\2\2XY\7\37\2\2Y\27\3\2\2\2Z[\t\5\2\2[\31\3\2\2\2\\]\t\6\2\2]\33"+
-		"\3\2\2\2\6#+\63:";
+		":\67\3\2\2\2:8\3\2\2\2:9\3\2\2\2;\13\3\2\2\2<=\t\4\2\2=>\7!\2\2>?\7\17"+
+		"\2\2?@\5\26\f\2@A\7\f\2\2A\r\3\2\2\2BC\7\20\2\2CD\7!\2\2DE\7\17\2\2EF"+
+		"\5\26\f\2FG\7\f\2\2G\17\3\2\2\2HI\7\21\2\2IJ\7!\2\2JK\7\17\2\2KL\5\26"+
+		"\f\2LM\7\f\2\2M\21\3\2\2\2NO\7\22\2\2OP\5\26\f\2PQ\7\17\2\2QR\7!\2\2R"+
+		"S\7\23\2\2S\23\3\2\2\2TU\5\26\f\2UV\5\30\r\2VW\5\32\16\2W\25\3\2\2\2X"+
+		"Y\7\37\2\2Y\27\3\2\2\2Z[\t\5\2\2[\31\3\2\2\2\\]\t\6\2\2]\33\3\2\2\2\6"+
+		"#+\63:";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

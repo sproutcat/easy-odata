@@ -10,16 +10,16 @@ public final class Constants {
     /**
      * 逗号
      */
-    public final static String SYMBOL_COMMA = ",";
+    public final static char SYMBOL_COMMA = ',';
 
     /**
      * 句号
      */
-    public final static String SYMBOL_PERIOD = ".";
+    public final static char SYMBOL_PERIOD = '.';
 
     /**
      * 斜杠
      */
-    public final static String SYMBOL_SLASH = "/";
+    public final static char SYMBOL_SLASH = '/';
 
 }
