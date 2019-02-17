@@ -27,7 +27,7 @@ public class OdataTest {
 
     @Test
     public void odataFilter() {
-        String filter = "username eq 'aa' e (username eq 'aa' o username lt '1') e contains('admin',username)";
+        String filter = "username eq 'aa' e (username eq 'aa' o username lt '1' o (gender ge 10 e gender le 30)) e contains('admin',username)";
         log.debug("原始字符串： {}", filter);
 
         OdataFilter odataFilter = new OdataFilterParser(filter).parse();

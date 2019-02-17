@@ -1,13 +1,8 @@
 package com.tang.easyodata.code.toolkit;
 
-import com.tang.easyodata.code.model.OdataField;
-import com.tang.easyodata.code.model.OdataFilter;
-import com.tang.easyodata.code.model.OdataOrderby;
-import com.tang.easyodata.code.parser.OdataFilterParser;
-import com.tang.easyodata.code.parser.OdataOrderbyParser;
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.List;
+import static com.tang.easyodata.code.toolkit.Constants.*;
 
 /**
  * @Description: OdataUtils
@@ -77,8 +72,8 @@ public final class OdataUtils {
      * @return
      */
     public static boolean isFieldNameChar(char input) {
-        return Character.isLetterOrDigit(input) || input == '_' || input == '.'
-                || input == '/' || input == '+';
+        return Character.isLetterOrDigit(input) || input == SYMBOL_UNDERLINE || input == SYMBOL_PERIOD
+                || input == SYMBOL_SLASH || input == SYMBOL_PLUS;
     }
 
 }

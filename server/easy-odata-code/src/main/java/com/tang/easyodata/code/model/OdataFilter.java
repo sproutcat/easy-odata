@@ -14,24 +14,24 @@ import org.apache.commons.lang3.ArrayUtils;
 @Getter
 @Setter
 @NoArgsConstructor
-public class OdataFilter extends OdataField {
+public class OdataFilter<T> extends OdataField {
 
     /**
      * 操作方式
      */
-    private OdataFilterOperateEnum operate;
+    protected OdataFilterOperateEnum operate;
     /**
      * 过滤的值
      */
-    private Object value;
+    protected T value;
 
-    public OdataFilter(String fieldName, String value) {
+    public OdataFilter(String fieldName, T value) {
         this.fieldName = fieldName;
         this.operate = OdataFilterOperateEnum.EQ;
         this.value = value;
     }
 
-    public OdataFilter(String fieldName, OdataFilterOperateEnum operate, Object value) {
+    public OdataFilter(String fieldName, OdataFilterOperateEnum operate, T value) {
         this.fieldName = fieldName;
         this.operate = operate;
         this.value = value;

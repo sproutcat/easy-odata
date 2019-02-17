@@ -22,4 +22,24 @@ public final class Constants {
      */
     public final static char SYMBOL_SLASH = '/';
 
+    /**
+     * 下划线
+     */
+    public final static char SYMBOL_UNDERLINE = '_';
+
+    /**
+     * 加号
+     */
+    public final static char SYMBOL_PLUS = '+';
+
+    /**
+     * 括号
+     */
+    public final static char SYMBOL_BRACKETS = '(';
+
+    /**
+     * 反括号
+     */
+    public final static char SYMBOL_ANTI_BRACKET = ')';
+
 }

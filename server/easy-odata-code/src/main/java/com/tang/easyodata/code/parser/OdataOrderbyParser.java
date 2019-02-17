@@ -29,7 +29,7 @@ public class OdataOrderbyParser extends BaseParser<List<OdataOrderby>> {
         if (StringUtils.isBlank(input)) {
             return null;
         }
-        int len = input.length(), last = len - 1, i = 0, start = 0;
+        int len = input.length(), i = 0, start = 0;
         List<OdataOrderby> orderbyList = new ArrayList<>();
         OdataOrderby by;
         boolean lastMatch = false;
