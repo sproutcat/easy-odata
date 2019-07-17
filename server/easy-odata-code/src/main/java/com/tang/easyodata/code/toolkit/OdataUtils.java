@@ -53,7 +53,8 @@ public final class OdataUtils {
     }
 
     /**
-     * 过滤值，已保证安全性
+     * 过滤值，以保证安全性
+     *
      * @param value
      * @return
      */

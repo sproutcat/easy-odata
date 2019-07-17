@@ -4,7 +4,7 @@ options {
     language=Java;
 }
 @header {
-package com.tang.easyodata.code.antlr4.ast;
+package com.tang.easyodata.code.parser.ast;
 }
 
 odataFilter: criteriaExpression;
@@ -62,7 +62,6 @@ STRING: ('\'' (~ '\'')* '\'') ;
 NUMBER
    : '-'? INT ('.' [0-9] +)? EXP?
    ;
-
 
 fragment INT
    : '0' | [1-9] [0-9]*

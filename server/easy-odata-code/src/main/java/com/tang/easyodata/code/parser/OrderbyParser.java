@@ -18,9 +18,9 @@ import static com.tang.easyodata.code.toolkit.Constants.SYMBOL_COMMA;
  * @Date: 2019/1/6/006 18:18
  */
 @Slf4j
-public class OdataOrderbyParser extends BaseParser<List<OdataOrderby>> {
+public class OrderbyParser extends BaseParser<List<OdataOrderby>> {
 
-    public OdataOrderbyParser(String input) {
+    public OrderbyParser(String input) {
         super(input);
     }
 

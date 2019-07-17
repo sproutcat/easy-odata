@@ -5,6 +5,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.apache.commons.lang3.ArrayUtils;
+import org.springframework.util.CollectionUtils;
+
+import java.util.Arrays;
+import java.util.Collection;
 
 /**
  * @Description: odata 过滤实体
@@ -37,8 +41,24 @@ public class OdataFilter<T> extends OdataField {
         this.value = value;
     }
 
-    public static OdataFilter addLogic(OdataFilterOperateEnum logic, OdataFilter... odataFilter) {
-        if (ArrayUtils.isEmpty(odataFilter)) {
+    /**
+     * 创建逻辑过滤对象
+     * @param logic
+     * @param odataFilter
+     * @return
+     */
+    public static OdataFilter buildLogicFilter(OdataFilterOperateEnum logic, OdataFilter... odataFilter) {
+        return buildLogicFilter(logic, Arrays.asList(odataFilter));
+    }
+
+    /**
+     * 创建逻辑过滤对象
+     * @param logic
+     * @param odataFilter
+     * @return
+     */
+    public static OdataFilter buildLogicFilter(OdataFilterOperateEnum logic, Collection<OdataFilter> odataFilter) {
+        if (CollectionUtils.isEmpty(odataFilter)) {
             return null;
         }
         if (!OdataFilterOperateEnum.OR.equals(logic)) {

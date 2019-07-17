@@ -1,6 +1,6 @@
 // Generated from D:/resoures/workspace-my.4/easy-odata-all/server/easy-odata-code/src/test/resources\OdataFilter.g4 by ANTLR 4.7
 
-package com.tang.easyodata.code.antlr4.ast;
+package com.tang.easyodata.code.parser.ast;
 
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
@@ -8,8 +8,6 @@ import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.misc.*;
 import org.antlr.v4.runtime.tree.*;
 import java.util.List;
-import java.util.Iterator;
-import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class OdataFilterParser extends Parser {

@@ -1,8 +1,10 @@
-package com.tang.easyodata.code.antlr4;
+package com.tang.easyodata.code.parser;
 
-import com.tang.easyodata.code.antlr4.ast.OdataFilterLexer;
-import com.tang.easyodata.code.antlr4.ast.OdataFilterParser;
 import com.tang.easyodata.code.model.OdataFilter;
+import com.tang.easyodata.code.parser.ast.OdataFilterLexer;
+import com.tang.easyodata.code.parser.ast.OdataFilterParser;
+import com.tang.easyodata.code.parser.listener.OdataFilterOperateListener;
+import lombok.extern.slf4j.Slf4j;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.apache.commons.lang3.StringUtils;
@@ -12,8 +14,17 @@ import org.apache.commons.lang3.StringUtils;
  * @Author: tzg
  * @Date: 2019/1/10/010 1:15
  */
-//@Slf4j
-public class Antlr4OdataUtils {
+@Slf4j
+public class Antlr4FilterParser extends BaseParser<OdataFilter> {
+
+    public Antlr4FilterParser(String input) {
+        super(input);
+    }
+
+    @Override
+    public OdataFilter parse() {
+        return parseFilter(input);
+    }
 
     /**
      * 解析 odata filter 字符串

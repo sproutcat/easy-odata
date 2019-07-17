@@ -1,8 +1,8 @@
-package com.tang.easyodata.code.antlr4;
+package com.tang.easyodata.code.parser.listener;
 
 
-import com.tang.easyodata.code.antlr4.ast.OdataFilterBaseListener;
-import com.tang.easyodata.code.antlr4.ast.OdataFilterParser;
+import com.tang.easyodata.code.parser.ast.OdataFilterBaseListener;
+import com.tang.easyodata.code.parser.ast.OdataFilterParser;
 import com.tang.easyodata.code.model.OdataFilter;
 import com.tang.easyodata.code.model.enums.OdataFilterOperateEnum;
 import com.tang.easyodata.code.toolkit.OdataUtils;
